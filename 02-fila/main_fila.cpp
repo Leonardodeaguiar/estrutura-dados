@@ -16,28 +16,23 @@ int main()
         cout << "opção: ";
         cin >> opcao;
 
-        if (opcao == 0)
+        switch (opcao)
         {
-            break;
-        }
-        else if (opcao == 1)
-        {
+        case 1:
             cout << "Digite um numero inteiro para a fila: ";
             cin >> item;
             fila.adiciona_elemento(item);
-        }
-        else if (opcao == 2)
-        {
+            break;
+        case 2:
             cout << fila.remover_elemento();
             fila.organiza_elementos();
-        }
-        else if (opcao == 3)
-        {
+            break;
+        case 3:
             fila.imprimir();
-        }
-        else
-        {
+            break;
+        default:
             cout << "opcao invalida !";
+            break;
         }
 
     } while (opcao != 0);
